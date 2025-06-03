@@ -50,7 +50,7 @@ are in some form of balance:
 
 R = 2Yn + 2.7(R-Y)  
 G = 2Yn + 6.8(Y-B) + 4.7(Y-R)  
-B = 3Yn + 2(R-Y)
+B = 3Yn + 2(B-Y)
 
 Further provision for balancing the channels is made
 through a potentiometer on each channel and the result
