@@ -35,21 +35,21 @@ convert the YPrPb into the appropriate format.
 
 The maths requires 5 values to be generated
 
-Yn - the inverse signal of Y
-B-Y - the inverse of Pb
-Y-B - Pb
-R-Y - the inverse of Pr
+Yn - the inverse signal of Y  
+B-Y - the inverse of Pb  
+Y-B - Pb  
+R-Y - the inverse of Pr  
 Y-R - Pr
 
-Adding Yn to R-Y produces R
-Adding Yn to Y-R and Y-B produces G
+Adding Yn to R-Y produces R  
+Adding Yn to Y-R and Y-B produces G  
 Adding Yn to B-Y produces B
 
 All of the sums need weighting to make sure the results
 are in some form of balance:
 
-R = 2Yn + 2.7(R-Y)
-G = 2Yn + 6.8(Y-B) + 4.7(Y-R)
+R = 2Yn + 2.7(R-Y)  
+G = 2Yn + 6.8(Y-B) + 4.7(Y-R)  
 B = 3Yn + 2(R-Y)
 
 Further provision for balancing the channels is made
