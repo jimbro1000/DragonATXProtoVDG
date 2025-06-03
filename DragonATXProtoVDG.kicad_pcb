@@ -21045,7 +21045,31 @@
 		(layer "User.3")
 		(uuid "2acb5876-ed56-457c-8fb1-70cf7444f9ff")
 	)
-	(gr_text "Revision 1.0.0"
+	(gr_text "Right pad\nR14 = Y\nR15 = B-Y\nR17 = Y-B\nR18 = Y-R\nR19 = R-Y\n\nLeft Pad\nR14 & R15 = B-Y+Y\nR16 & R17 & R18 = Y-B+Y-R+Y\nR19 & R20 = R-Y+Y"
+		(at 194.9958 79.9084 0)
+		(layer "F.SilkS")
+		(uuid "0135dc0a-1585-4420-821e-ff3ac5ce2a30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Test Points\n\nTP1 = Luma\nTP2 = PhiA\nTP3 = PhiB\nTP4 = Format\nQ6/R23 = Red\nQ5/R22 = Green\nQ4/R21 = Blue\nC5 = Chroma\nC6 = Luma\nC15 = Composite"
+		(at 194.9958 61.1632 0)
+		(layer "F.SilkS")
+		(uuid "0e0390ac-1212-4a04-ba20-b4541bb07397")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Revision 1.0.1"
 		(at 70.7898 29.5783 0)
 		(layer "F.SilkS")
 		(uuid "4106169a-1999-42b5-bfeb-b4d747c88ebf")
@@ -21065,6 +21089,18 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.2)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "JP1 - Format \n   1-2=PAL\n   2-3=NTSC\n\nJP2 - Clock Source\n   open = direct\n   closed = format controlled"
+		(at 194.9958 40.0558 0)
+		(layer "F.SilkS")
+		(uuid "8dffacb1-05c6-43b0-80f3-6ed107f0b934")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
 			)
 			(justify left bottom)
 		)
