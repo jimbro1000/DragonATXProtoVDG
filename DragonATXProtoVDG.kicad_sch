@@ -12571,6 +12571,12 @@
 		(uuid "de5645a7-17e7-480a-9cfd-957eacbaa107")
 	)
 	(junction
+		(at 198.12 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e255103e-b229-44a3-9575-2384ba63883b")
+	)
+	(junction
 		(at 205.74 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -13068,6 +13074,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 38.1) (xy 198.12 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c968420-fb53-49ed-a882-5b4ee12e7022")
+	)
+	(wire
+		(pts
 			(xy 339.09 203.2) (xy 340.36 203.2)
 		)
 		(stroke
@@ -13145,6 +13161,16 @@
 			(type default)
 		)
 		(uuid "5e188635-8a86-4233-b999-4a1f9a78221e")
+	)
+	(wire
+		(pts
+			(xy 205.74 38.1) (xy 208.28 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67e38ae0-53e8-4966-bfc6-121bd32f0aef")
 	)
 	(wire
 		(pts
@@ -13238,6 +13264,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 38.1) (xy 198.12 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74070189-f210-45dc-9ce3-fa990c17ac47")
+	)
+	(wire
+		(pts
 			(xy 96.52 43.18) (xy 105.41 43.18)
 		)
 		(stroke
@@ -13278,7 +13314,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 48.006) (xy 208.28 48.26)
+			(xy 208.28 38.1) (xy 208.28 48.26)
 		)
 		(stroke
 			(width 0)
@@ -13288,7 +13324,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 48.26) (xy 196.85 48.26)
+			(xy 200.66 48.26) (xy 198.12 48.26)
 		)
 		(stroke
 			(width 0)
@@ -14385,6 +14421,16 @@
 			(justify left bottom)
 		)
 		(uuid "38730ac5-885b-4463-a6f1-9f7d8b33c0eb")
+	)
+	(label "VCLK"
+		(at 163.83 162.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "38cbb519-3772-4794-8969-a5023a317a1b")
 	)
 	(label "~{A}{slash}S"
 		(at 185.42 57.15 180)
@@ -15700,6 +15746,28 @@
 			)
 		)
 	)
+	(global_label "BLUE"
+		(shape input)
+		(at 265.43 259.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0779bfad-8135-424c-9a58-d13fb32e586a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 257.6672 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TDI"
 		(shape input)
 		(at 224.79 271.78 180)
@@ -15713,6 +15781,28 @@
 		(uuid "13ca00ba-e4f4-43d0-8204-7995b62f0709")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 219.6166 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RED"
+		(shape input)
+		(at 265.43 264.16 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "15286671-0eb9-4b6d-a05f-a853566455d2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 258.7558 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16008,6 +16098,28 @@
 			)
 		)
 	)
+	(global_label "GREEN"
+		(shape input)
+		(at 265.43 269.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6f550352-c232-46f9-b22c-e112f9b2ea06")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 256.2763 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Chroma"
 		(shape bidirectional)
 		(at 29.21 22.86 180)
@@ -16241,28 +16353,6 @@
 		(uuid "c460e2e9-f6f9-4d90-a3f7-ec8b8eeb0e4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 313.3658 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CLK"
-		(shape input)
-		(at 163.83 162.56 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cfc51826-4b66-4c28-a391-02b6453e5655")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.9377 162.4806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18585,7 +18675,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 196.85 48.26 180)
+		(at 198.12 48.26 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18594,7 +18684,7 @@
 		(fields_autoplaced yes)
 		(uuid "3ba960f9-16d6-4fac-9327-71ec0913e369")
 		(property "Reference" "#PWR010"
-			(at 196.85 44.45 0)
+			(at 198.12 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18603,7 +18693,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 196.85 53.594 0)
+			(at 198.12 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18611,7 +18701,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 196.85 48.26 0)
+			(at 198.12 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18620,7 +18710,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 48.26 0)
+			(at 198.12 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18629,7 +18719,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 196.85 48.26 0)
+			(at 198.12 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19673,6 +19763,84 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 203.2 38.1 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c653ab0-f6bf-43d7-b018-840368e67c04")
+		(property "Reference" "C1"
+			(at 202.6539 45.085 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 202.6539 42.545 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
+			(at 203.2 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/katalog/datasheet/860010372006.pdf"
+			(at 203.2 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "732-8254-1-ND"
+			(at 203.2 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9f5c412-b3e6-4d2b-b915-9c052ee6f70e")
+		)
+		(pin "2"
+			(uuid "b80d67fe-9356-4071-bc99-ac39f31bd530")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "C1")
 					(unit 1)
 				)
 			)
