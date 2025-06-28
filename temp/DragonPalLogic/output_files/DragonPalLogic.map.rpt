@@ -1,0 +1,439 @@
+Analysis & Synthesis report for DragonPalLogic
+Mon Jun 02 21:21:33 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Parameter Settings for Inferred Entity Instance: VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0
+  9. Parameter Settings for Inferred Entity Instance: HSnCounter:HSyncCounter|lpm_counter:count_rtl_0
+ 10. Parameter Settings for Inferred Entity Instance: VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_counter:count_rtl_0
+ 11. Parameter Settings for Inferred Entity Instance: VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0
+ 12. Port Connectivity Checks: "VClkInterposer:interposer"
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Jun 02 21:21:33 2025           ;
+; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name               ; DragonPalLogic                                  ;
+; Top-level Entity Name       ; DragonPalLogic                                  ;
+; Family                      ; MAX7000AE                                       ;
+; Total macrocells            ; 31                                              ;
+; Total pins                  ; 14                                              ;
++-----------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                  ;
++----------------------------------------------------------------------------+------------------+----------------+
+; Option                                                                     ; Setting          ; Default Value  ;
++----------------------------------------------------------------------------+------------------+----------------+
+; Device                                                                     ; EPM7064AETC44-10 ;                ;
+; Top-level entity name                                                      ; DragonPalLogic   ; DragonPalLogic ;
+; Family name                                                                ; MAX7000AE        ; Cyclone IV GX  ;
+; Type of Retiming Performed During Resynthesis                              ; Full             ;                ;
+; Resynthesis Optimization Effort                                            ; Normal           ;                ;
+; Physical Synthesis Level for Resynthesis                                   ; Normal           ;                ;
+; Use Generated Physical Constraints File                                    ; On               ;                ;
+; Use smart compilation                                                      ; Off              ; Off            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On               ; On             ;
+; Enable compact report table                                                ; Off              ; Off            ;
+; Create Debugging Nodes for IP Cores                                        ; Off              ; Off            ;
+; Preserve fewer node names                                                  ; On               ; On             ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off              ; Off            ;
+; Verilog Version                                                            ; Verilog_2001     ; Verilog_2001   ;
+; VHDL Version                                                               ; VHDL_1993        ; VHDL_1993      ;
+; State Machine Processing                                                   ; Auto             ; Auto           ;
+; Safe State Machine                                                         ; Off              ; Off            ;
+; Extract Verilog State Machines                                             ; On               ; On             ;
+; Extract VHDL State Machines                                                ; On               ; On             ;
+; Ignore Verilog initial constructs                                          ; Off              ; Off            ;
+; Iteration limit for constant Verilog loops                                 ; 5000             ; 5000           ;
+; Iteration limit for non-constant Verilog loops                             ; 250              ; 250            ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On               ; On             ;
+; Infer RAMs from Raw Logic                                                  ; On               ; On             ;
+; Parallel Synthesis                                                         ; On               ; On             ;
+; NOT Gate Push-Back                                                         ; On               ; On             ;
+; Power-Up Don't Care                                                        ; On               ; On             ;
+; Remove Duplicate Registers                                                 ; On               ; On             ;
+; Ignore CARRY Buffers                                                       ; Off              ; Off            ;
+; Ignore CASCADE Buffers                                                     ; Off              ; Off            ;
+; Ignore GLOBAL Buffers                                                      ; Off              ; Off            ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off              ; Off            ;
+; Ignore LCELL Buffers                                                       ; Auto             ; Auto           ;
+; Ignore SOFT Buffers                                                        ; Off              ; Off            ;
+; Limit AHDL Integers to 32 Bits                                             ; Off              ; Off            ;
+; Optimization Technique                                                     ; Speed            ; Speed          ;
+; Allow XOR Gate Usage                                                       ; On               ; On             ;
+; Auto Logic Cell Insertion                                                  ; On               ; On             ;
+; Parallel Expander Chain Length                                             ; 4                ; 4              ;
+; Auto Parallel Expanders                                                    ; On               ; On             ;
+; Auto Open-Drain Pins                                                       ; On               ; On             ;
+; Auto Resource Sharing                                                      ; Off              ; Off            ;
+; Maximum Fan-in Per Macrocell                                               ; 100              ; 100            ;
+; Use LogicLock Constraints during Resource Balancing                        ; On               ; On             ;
+; Ignore translate_off and synthesis_off directives                          ; Off              ; Off            ;
+; Report Parameter Settings                                                  ; On               ; On             ;
+; Report Source Assignments                                                  ; On               ; On             ;
+; Report Connectivity Checks                                                 ; On               ; On             ;
+; HDL message level                                                          ; Level2           ; Level2         ;
+; Suppress Register Optimization Related Messages                            ; Off              ; Off            ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000             ; 5000           ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000             ; 5000           ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100              ; 100            ;
+; Block Design Naming                                                        ; Auto             ; Auto           ;
+; Synthesis Effort                                                           ; Auto             ; Auto           ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On               ; On             ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off              ; Off            ;
+; Analysis & Synthesis Message Level                                         ; Medium           ; Medium         ;
+; Disable Register Merging Across Hierarchies                                ; Auto             ; Auto           ;
+; Synthesis Seed                                                             ; 1                ; 1              ;
++----------------------------------------------------------------------------+------------------+----------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; VClkPulseGenerator.v             ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/VClkPulseGenerator.v                            ;         ;
+; VClkInterposer.v                 ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/VClkInterposer.v                                ;         ;
+; LinePulseGenerator.v             ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/LinePulseGenerator.v                            ;         ;
+; HSnCounter.v                     ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/HSnCounter.v                                    ;         ;
+; DecaQuintCounter.v               ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/DecaQuintCounter.v                              ;         ;
+; DragonPalLogic.v                 ; yes             ; User Verilog HDL File  ; H:/Quartus/DragonPalLogic/DragonPalLogic.v                                ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; addcore.tdf                      ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.tdf             ;         ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_csnbuffer.inc         ;         ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_csnbuffer.tdf         ;         ;
+; altshift.tdf                     ; yes             ; Megafunction           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++----------------------+-------------------------------------------------------------------+
+; Resource             ; Usage                                                             ;
++----------------------+-------------------------------------------------------------------+
+; Logic cells          ; 31                                                                ;
+; Total registers      ; 22                                                                ;
+; I/O pins             ; 14                                                                ;
+; Shareable expanders  ; 5                                                                 ;
+; Parallel expanders   ; 2                                                                 ;
+; Maximum fan-out node ; VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[7] ;
+; Maximum fan-out      ; 14                                                                ;
+; Total fan-out        ; 220                                                               ;
+; Average fan-out      ; 4.40                                                              ;
++----------------------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                      ;
++----------------------------------------+------------+------+----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Macrocells ; Pins ; Full Hierarchy Name                                                                          ; Library Name ;
++----------------------------------------+------------+------+----------------------------------------------------------------------------------------------+--------------+
+; |DragonPalLogic                        ; 31         ; 14   ; |DragonPalLogic                                                                              ; work         ;
+;    |HSnCounter:HSyncCounter|           ; 5          ; 0    ; |DragonPalLogic|HSnCounter:HSyncCounter                                                      ; work         ;
+;       |lpm_counter:count_rtl_0|        ; 5          ; 0    ; |DragonPalLogic|HSnCounter:HSyncCounter|lpm_counter:count_rtl_0                              ; work         ;
+;    |VClkInterposer:interposer|         ; 8          ; 0    ; |DragonPalLogic|VClkInterposer:interposer                                                    ; work         ;
+;       |DecaQuintCounter:DQCounter|     ; 7          ; 0    ; |DragonPalLogic|VClkInterposer:interposer|DecaQuintCounter:DQCounter                         ; work         ;
+;          |lpm_counter:count_rtl_0|     ; 6          ; 0    ; |DragonPalLogic|VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_counter:count_rtl_0 ; work         ;
+;    |VClkPulseGenerator:pulseGenerator| ; 11         ; 0    ; |DragonPalLogic|VClkPulseGenerator:pulseGenerator                                            ; work         ;
+;       |lpm_counter:count_rtl_0|        ; 10         ; 0    ; |DragonPalLogic|VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0                    ; work         ;
++----------------------------------------+------------+------+----------------------------------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0 ;
++------------------------+-------------------+---------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                          ;
++------------------------+-------------------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 8                 ; Untyped                                                       ;
+; LPM_DIRECTION          ; UP                ; Untyped                                                       ;
+; LPM_MODULUS            ; 0                 ; Untyped                                                       ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                       ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                       ;
+; DEVICE_FAMILY          ; MAX7000AE         ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                            ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                            ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                       ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                       ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                                       ;
++------------------------+-------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: HSnCounter:HSyncCounter|lpm_counter:count_rtl_0 ;
++------------------------+-------------------+-----------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                ;
++------------------------+-------------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 8                 ; Untyped                                             ;
+; LPM_DIRECTION          ; UP                ; Untyped                                             ;
+; LPM_MODULUS            ; 0                 ; Untyped                                             ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                             ;
+; DEVICE_FAMILY          ; MAX7000AE         ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                             ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                  ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                  ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                             ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                             ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                             ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                             ;
++------------------------+-------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_counter:count_rtl_0 ;
++------------------------+-------------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                                             ;
++------------------------+-------------------+----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                                   ;
+; LPM_WIDTH              ; 6                 ; Untyped                                                                          ;
+; LPM_DIRECTION          ; UP                ; Untyped                                                                          ;
+; LPM_MODULUS            ; 0                 ; Untyped                                                                          ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                                          ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                                          ;
+; DEVICE_FAMILY          ; MAX7000AE         ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                               ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                                          ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                                          ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                                                          ;
++------------------------+-------------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0 ;
++------------------------+-------------+---------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                            ;
++------------------------+-------------+---------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                                         ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                         ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                         ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                         ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                         ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                              ;
+; DEVICE_FAMILY          ; MAX7000AE   ; Untyped                                                                         ;
+; USE_WYS                ; OFF         ; Untyped                                                                         ;
+; STYLE                  ; FAST        ; Untyped                                                                         ;
+; CBXI_PARAMETER         ; add_sub_cqh ; Untyped                                                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                  ;
++------------------------+-------------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VClkInterposer:interposer"                                                                                    ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Clk       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; Luma_Ctrl ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 02 21:21:31 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DragonPalLogic -c DragonPalLogic
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file vclkpulsegenerator.v
+    Info (12023): Found entity 1: VClkPulseGenerator
+Info (12021): Found 1 design units, including 1 entities, in source file vclkinterposer.v
+    Info (12023): Found entity 1: VClkInterposer
+Info (12021): Found 1 design units, including 1 entities, in source file linepulsegenerator.v
+    Info (12023): Found entity 1: LinePulseGenerator
+Info (12021): Found 1 design units, including 1 entities, in source file hsncounter.v
+    Info (12023): Found entity 1: HSnCounter
+Info (12021): Found 1 design units, including 1 entities, in source file decaquintcounter.v
+    Info (12023): Found entity 1: DecaQuintCounter
+Info (12021): Found 1 design units, including 1 entities, in source file dragonpallogic.v
+    Info (12023): Found entity 1: DragonPalLogic
+Warning (10236): Verilog HDL Implicit Net warning at DragonPalLogic.v(56): created implicit net for "Clk"
+Info (12127): Elaborating entity "DragonPalLogic" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DragonPalLogic.v(39): object "nHLine24uFS" assigned a value but never read
+Info (12128): Elaborating entity "HSnCounter" for hierarchy "HSnCounter:HSyncCounter"
+Warning (10230): Verilog HDL assignment warning at HSnCounter.v(31): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "VClkInterposer" for hierarchy "VClkInterposer:interposer"
+Info (12128): Elaborating entity "DecaQuintCounter" for hierarchy "VClkInterposer:interposer|DecaQuintCounter:DQCounter"
+Warning (10230): Verilog HDL assignment warning at DecaQuintCounter.v(31): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "VClkPulseGenerator" for hierarchy "VClkPulseGenerator:pulseGenerator"
+Warning (10230): Verilog HDL assignment warning at VClkPulseGenerator.v(30): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "LinePulseGenerator" for hierarchy "LinePulseGenerator:linePulseGenerator"
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(44): variable "toggle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(44): variable "enable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(49): variable "enable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(50): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at LinePulseGenerator.v(50): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(51): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(53): variable "enable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at LinePulseGenerator.v(54): variable "iq2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at LinePulseGenerator.v(42): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LinePulseGenerator.v(42): inferring latch(es) for variable "toggle", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LinePulseGenerator.v(42): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LinePulseGenerator.v(42): inferring latch(es) for variable "iq", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LinePulseGenerator.v(42): inferring latch(es) for variable "iq2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "iq2" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "iq" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "counter[0]" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "counter[1]" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "counter[2]" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "counter[3]" at LinePulseGenerator.v(42)
+Info (10041): Inferred latch for "toggle" at LinePulseGenerator.v(57)
+Info (10041): Inferred latch for "enable" at LinePulseGenerator.v(57)
+Warning (14025): LATCH primitive "LinePulseGenerator:linePulseGenerator|iq2" is permanently disabled
+Info (19000): Inferred 3 megafunctions from design logic
+    Info (19001): Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "VClkPulseGenerator:pulseGenerator|count_rtl_0"
+    Info (19001): Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "HSnCounter:HSyncCounter|count_rtl_0"
+    Info (19001): Inferred lpm_counter megafunction (LPM_WIDTH=6) from the following logic: "VClkInterposer:interposer|DecaQuintCounter:DQCounter|count_rtl_0"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "VClkInterposer:interposer|DecaQuintCounter:DQCounter|Add0"
+Info (12130): Elaborated megafunction instantiation "VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0"
+Info (12133): Instantiated megafunction "VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_DIRECTION" = "UP"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info (12130): Elaborated megafunction instantiation "HSnCounter:HSyncCounter|lpm_counter:count_rtl_0"
+Info (12133): Instantiated megafunction "HSnCounter:HSyncCounter|lpm_counter:count_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_DIRECTION" = "UP"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info (12130): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_counter:count_rtl_0"
+Info (12133): Instantiated megafunction "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_counter:count_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "6"
+    Info (12134): Parameter "LPM_DIRECTION" = "UP"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info (12130): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12133): Instantiated megafunction "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "6"
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|a_csnbuffer:oflow_node", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|a_csnbuffer:result_node", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Info (12131): Elaborated megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "VClkInterposer:interposer|DecaQuintCounter:DQCounter|lpm_add_sub:Add0"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 7 buffer(s)
+    Info (13019): Ignored 7 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LUMA_CONTROL" is stuck at VCC
+    Warning (13410): Pin "CHROMA_CONTROL" is stuck at GND
+    Warning (13410): Pin "SYNC_CONTROL" is stuck at GND
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "E"
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21063): Implemented 31 macrocells
+    Info (21073): Implemented 5 shareable expanders
+Info (144001): Generated suppressed messages file H:/Quartus/DragonPalLogic/output_files/DragonPalLogic.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4574 megabytes
+    Info: Processing ended: Mon Jun 02 21:21:33 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in H:/Quartus/DragonPalLogic/output_files/DragonPalLogic.map.smsg.
+
+

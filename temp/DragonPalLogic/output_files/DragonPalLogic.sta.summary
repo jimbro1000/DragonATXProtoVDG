@@ -1,0 +1,81 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'VClkInterposer:interposer|q'
+Slack : -11.400
+TNS   : -85.800
+
+Type  : Setup 'VClk'
+Slack : -10.000
+TNS   : -74.600
+
+Type  : Setup 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]'
+Slack : -9.000
+TNS   : -63.000
+
+Type  : Setup 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]'
+Slack : -9.000
+TNS   : -63.000
+
+Type  : Setup 'HSn'
+Slack : -9.000
+TNS   : -45.000
+
+Type  : Setup 'VClkInterposer:interposer|DecaQuintCounter:DQCounter|iqa'
+Slack : -0.700
+TNS   : -0.700
+
+Type  : Hold 'VClkInterposer:interposer|DecaQuintCounter:DQCounter|iqa'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Hold 'VClk'
+Slack : -2.100
+TNS   : -16.200
+
+Type  : Hold 'VClkInterposer:interposer|q'
+Slack : -0.700
+TNS   : -5.000
+
+Type  : Hold 'HSn'
+Slack : -0.600
+TNS   : -3.000
+
+Type  : Hold 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]'
+Slack : 5.800
+TNS   : 0.000
+
+Type  : Hold 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]'
+Slack : 5.800
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'VClk'
+Slack : -3.500
+TNS   : -56.000
+
+Type  : Minimum Pulse Width 'VClkInterposer:interposer|q'
+Slack : -3.500
+TNS   : -56.000
+
+Type  : Minimum Pulse Width 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]'
+Slack : -3.500
+TNS   : -49.000
+
+Type  : Minimum Pulse Width 'VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]'
+Slack : -3.500
+TNS   : -49.000
+
+Type  : Minimum Pulse Width 'HSn'
+Slack : -3.500
+TNS   : -35.000
+
+Type  : Minimum Pulse Width 'VClkInterposer:interposer|DecaQuintCounter:DQCounter|iqa'
+Slack : -3.500
+TNS   : -14.000
+
+Type  : Minimum Pulse Width 'FSn'
+Slack : -3.500
+TNS   : -7.000
+
+------------------------------------------------------------
