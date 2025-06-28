@@ -17026,7 +17026,7 @@
 			)
 		)
 	)
-	(global_label "phiA'"
+	(global_label "phiA"
 		(shape input)
 		(at 309.88 114.3 180)
 		(fields_autoplaced yes)
@@ -17038,7 +17038,7 @@
 		)
 		(uuid "1fff8664-5b96-4a95-8e44-5567cd5ae433")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 302.2986 114.3 0)
+			(at 302.9034 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17268,7 +17268,7 @@
 			)
 		)
 	)
-	(global_label "phiB'"
+	(global_label "phiB"
 		(shape output)
 		(at 265.43 269.24 180)
 		(fields_autoplaced yes)
@@ -17280,7 +17280,7 @@
 		)
 		(uuid "59a5fcb0-68d9-464e-918e-9f1320789300")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.6672 269.24 0)
+			(at 258.272 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17378,7 +17378,7 @@
 			)
 		)
 	)
-	(global_label "phiA'"
+	(global_label "phiA"
 		(shape output)
 		(at 265.43 264.16 180)
 		(fields_autoplaced yes)
@@ -17390,7 +17390,7 @@
 		)
 		(uuid "706aeb6f-f62c-4354-b643-00fbd1a0d3c5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.8486 264.16 0)
+			(at 258.4534 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17664,7 +17664,7 @@
 			)
 		)
 	)
-	(global_label "phiB'"
+	(global_label "phiB"
 		(shape input)
 		(at 309.88 76.2 180)
 		(fields_autoplaced yes)
@@ -17676,7 +17676,7 @@
 		)
 		(uuid "a4e049e0-91bf-45b7-ae36-cb74f392e94d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 302.1172 76.2 0)
+			(at 302.722 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)

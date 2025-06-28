@@ -16,7 +16,7 @@
 MODELDATA
 /*MODELDATA HEADER*/
 /*
- This file contains Slow Corner delays for the design using part EPM7064AETC44-10
+ This file contains Slow Corner delays for the design using part EPM7064AETA44-10
  with speed grade 10, core voltage Auto, and temperature 2147483647 Celsius
 
 */
@@ -32,11 +32,35 @@ TIMINGDATA
 ARCDATA
 pos_Format__FSn__setup:
 RISE_CONSTRAINT( scalar ) {
-VALUES ("3.600");
+VALUES ("3.500");
 }
 
 FALL_CONSTRAINT( scalar ) {
-VALUES ("3.600");
+VALUES ("3.500");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClk__FSn__setup:
+RISE_CONSTRAINT( scalar ) {
+VALUES ("-0.300");
+}
+
+FALL_CONSTRAINT( scalar ) {
+VALUES ("-0.300");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClk__FSn__setup:
+RISE_CONSTRAINT( scalar ) {
+VALUES ("-0.300");
+}
+
+FALL_CONSTRAINT( scalar ) {
+VALUES ("-0.300");
 }
 
 ENDARCDATA
@@ -80,11 +104,35 @@ ENDARCDATA
 ARCDATA
 pos_Format__FSn__hold:
 RISE_CONSTRAINT( scalar ) {
-VALUES ("0.600");
+VALUES ("0.700");
 }
 
 FALL_CONSTRAINT( scalar ) {
-VALUES ("0.600");
+VALUES ("0.700");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClk__FSn__hold:
+RISE_CONSTRAINT( scalar ) {
+VALUES ("4.500");
+}
+
+FALL_CONSTRAINT( scalar ) {
+VALUES ("4.500");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClk__FSn__hold:
+RISE_CONSTRAINT( scalar ) {
+VALUES ("4.500");
+}
+
+FALL_CONSTRAINT( scalar ) {
+VALUES ("4.500");
 }
 
 ENDARCDATA
@@ -128,11 +176,11 @@ ENDARCDATA
 ARCDATA
 pos_FSn__CLK__delay:
 CELL_RISE( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
 }
 
 ENDARCDATA
@@ -140,11 +188,11 @@ ENDARCDATA
 ARCDATA
 pos_FSn__FormatClock__delay:
 CELL_RISE( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
 }
 
 ENDARCDATA
@@ -152,11 +200,11 @@ ENDARCDATA
 ARCDATA
 pos_FSn__FrmFormat__delay:
 CELL_RISE( scalar ) {
-VALUES ("9.600");
+VALUES ("9.700");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("9.600");
+VALUES ("9.700");
 }
 
 ENDARCDATA
@@ -164,11 +212,23 @@ ENDARCDATA
 ARCDATA
 pos_FSn__HS__delay:
 CELL_RISE( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("16.500");
+VALUES ("16.600");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_FSn__LUMA_CONTROL__delay:
+CELL_RISE( scalar ) {
+VALUES ("16.600");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("16.600");
 }
 
 ENDARCDATA
@@ -176,11 +236,11 @@ ENDARCDATA
 ARCDATA
 pos_HSn__HS__delay:
 CELL_RISE( scalar ) {
-VALUES ("10.000");
+VALUES ("10.100");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("10.000");
+VALUES ("10.100");
 }
 
 ENDARCDATA
@@ -188,11 +248,11 @@ ENDARCDATA
 ARCDATA
 pos_HSn__HS__delay:
 CELL_RISE( scalar ) {
-VALUES ("10.000");
+VALUES ("10.100");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("10.000");
+VALUES ("10.100");
 }
 
 ENDARCDATA
@@ -270,13 +330,49 @@ VALUES ("16.600");
 ENDARCDATA
 
 ARCDATA
-pos_VClkInterposer:interposer|q__HS__delay:
+pos_VClk__PAD_LUMA__delay:
 CELL_RISE( scalar ) {
-VALUES ("15.200");
+VALUES ("16.600");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("15.200");
+VALUES ("16.600");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkInterposer:interposer|q__CLK__delay:
+CELL_RISE( scalar ) {
+VALUES ("");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkInterposer:interposer|q__CLK__delay:
+CELL_RISE( scalar ) {
+VALUES ("8.600");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("8.600");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkInterposer:interposer|q__HS__delay:
+CELL_RISE( scalar ) {
+VALUES ("15.100");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("15.100");
 }
 
 ENDARCDATA
@@ -284,17 +380,29 @@ ENDARCDATA
 ARCDATA
 pos_VClkInterposer:interposer|q__LINE_PULSE__delay:
 CELL_RISE( scalar ) {
-VALUES ("15.200");
+VALUES ("15.100");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("15.200");
+VALUES ("15.100");
 }
 
 ENDARCDATA
 
 ARCDATA
-pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]__HS__delay:
+pos_VClkInterposer:interposer|q__LUMA_CONTROL__delay:
+CELL_RISE( scalar ) {
+VALUES ("8.600");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("8.600");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkInterposer:interposer|q__LUMA_CONTROL__delay:
 CELL_RISE( scalar ) {
 VALUES ("");
 }
@@ -306,37 +414,13 @@ VALUES ("");
 ENDARCDATA
 
 ARCDATA
-pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]__HS__delay:
+pos_VClkInterposer:interposer|q__PAD_LUMA__delay:
 CELL_RISE( scalar ) {
-VALUES ("8.700");
+VALUES ("15.100");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("8.700");
-}
-
-ENDARCDATA
-
-ARCDATA
-pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]__LINE_PULSE__delay:
-CELL_RISE( scalar ) {
-VALUES ("");
-}
-
-CELL_FALL( scalar ) {
-VALUES ("");
-}
-
-ENDARCDATA
-
-ARCDATA
-pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[0]__LINE_PULSE__delay:
-CELL_RISE( scalar ) {
-VALUES ("8.700");
-}
-
-CELL_FALL( scalar ) {
-VALUES ("8.700");
+VALUES ("15.100");
 }
 
 ENDARCDATA
@@ -379,6 +463,30 @@ ENDARCDATA
 
 ARCDATA
 pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]__LINE_PULSE__delay:
+CELL_RISE( scalar ) {
+VALUES ("8.700");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("8.700");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]__PAD_LUMA__delay:
+CELL_RISE( scalar ) {
+VALUES ("");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_VClkPulseGenerator:pulseGenerator|lpm_counter:count_rtl_0|dffs[4]__PAD_LUMA__delay:
 CELL_RISE( scalar ) {
 VALUES ("8.700");
 }

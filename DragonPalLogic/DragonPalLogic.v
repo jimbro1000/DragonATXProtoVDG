@@ -7,7 +7,7 @@
 // Design Name: 	 PAL conversion logic
 // Module Name:    DragonPalLogic 
 // Project Name: 
-// Target Devices: ATF1504ASL-44
+// Target Devices: ATF1504AS-44
 // Tool versions: 
 // Description: 
 //
@@ -19,30 +19,29 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DragonPalLogic(
-	input HSn,
-	input FSn,
-	input VClk,
-	input Format,
-	input E,
-	input PALClock,
-	output wire CLK,
-	output wire HS,
-	output wire LINE_PULSE,
-	output wire LUMA_CONTROL,
-	output wire CHROMA_CONTROL,
-	output wire SYNC_CONTROL,
+	input HSn, //Horizontal Sync from VDG
+	input FSn, //Frame Sync from VDG
+	input VClk, //Video Clock from SAM
+	input Format, //Format selection (low = PAL, high = NTSC)
+	input PALClock, //PAL colour carrier clock
+	output wire CLK, //Video Clock to SAM
+	output wire HS, //Horizontal Sync to encoder
+	output wire LINE_PULSE, //Artifical line pulse
+	output wire PAD_LUMA, //Artificial horizontal line for PAL
+	output wire LUMA_CONTROL, //Natural/padded luma
 	output wire FrmFormat,
 	output wire FormatClock
 );
 
 	wire	HLine24;
-	wire	nHLine24uFS;
 	reg	nextFormat;
 	wire	VClkPulse;
 	wire	ClkPulse;
-	wire	clk;
+	wire	clk2;
 	wire	hs;
+	wire	lumaCtl;
 
+	//IC28 - 24 line delay
 	HSnCounter HSyncCounter(
 		.HSn (HSn),
 		.FSn (FSn),
@@ -50,11 +49,12 @@ module DragonPalLogic(
 	);
 	
 	VClkInterposer interposer(
-		.VClk (VClk),
-		.Line24 (HLine24),
+		.VClk (VClk), // input video clock from SAM
+		.Line24 (HLine24), // 24th line of display
 		.VClkPulse (VClkPulse),
-		.Clk (Clk),
-		.ClkPulse (ClkPulse)
+		.Clk (clk2), // switched video clock output for PAL
+		.ClkPulse (ClkPulse),
+		.Luma_Ctrl (lumaCtl)
 	);
 	
 	VClkPulseGenerator pulseGenerator(
@@ -62,14 +62,7 @@ module DragonPalLogic(
 		.Pulse (VClkPulse)
 	);
 	
-	LinePulseGenerator linePulseGenerator(
-		.CLK (clk),
-		.SYNC (hs),
-		.Q (SYNC_CONTROL),
-		.Q2 (CHROMA_CONTROL)
-	);
-
-	always @(posedge FSn) begin
+	always @(negedge FSn) begin
 		nextFormat = Format;
 	end
 
@@ -77,15 +70,15 @@ module DragonPalLogic(
 
 	assign FormatClock = (VClk && nextFormat) || (PALClock && !nextFormat);
 	
-	assign nHLine24uFS = !(HLine24 && FSn);
-	
 	assign LINE_PULSE = !VClkPulse;
+	
+	assign PAD_LUMA = VClkPulse;
 	
 	assign hs = HSn ^ VClkPulse;
 	
-	assign LUMA_CONTROL = 1;
+	assign LUMA_CONTROL = nextFormat || (!nextFormat && lumaCtl);
 	
-	assign CLK = (VClk && nextFormat) || (clk && !nextFormat);
+	assign CLK = (VClk && nextFormat) || (clk2 && !nextFormat);
 	
 	assign HS = (HSn && nextFormat) || (hs && !nextFormat);
 

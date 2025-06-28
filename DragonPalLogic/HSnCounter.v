@@ -28,10 +28,11 @@ module HSnCounter(
 	
 	always @(negedge HSn) begin
 		if (FSn) begin
-			count = count + 1;
+			count = count + 8'b00000001;
 		end else
 			count = 0;
 	end
 	
-	assign Line24 = count[3] && count[4];
+	//IC27A
+	assign Line24 = !(!FSn && count[3] && count[4]);
 endmodule

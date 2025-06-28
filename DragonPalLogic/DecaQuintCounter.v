@@ -28,7 +28,7 @@ module DecaQuintCounter(
 	
 always @(posedge A) begin
 	if (count < 50) begin
-		count = count + 1;
+		count = count + 6'b000001;
 		iqa = count > 24;
 	end else begin
 		count = 0;

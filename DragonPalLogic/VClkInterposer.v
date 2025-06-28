@@ -30,23 +30,28 @@ module VClkInterposer(
 	wire	pulse50;
 	wire	c;
 	wire	nVClk;
-	wire	nClk;
+//	wire	nClk;
 	reg	q;
 
+	//IC32
 	DecaQuintCounter DQCounter(
 		.A (VClkPulse),
 		.Qa (pulse50)
 	);
-
+	
+	// IC14C
 	assign c = Line24 ^ pulse50;
 	assign nVClk = !VClk;
 	
+	// IC232B - q is clock inhibit
 	always @(negedge c) begin
 		q = nVClk;
 	end
 	
-	assign nClk = (q && VClk);
-	assign Clk = !nClk;
-	assign Luma_Ctrl = nClk;
-	assign ClkPulse = !(nClk && VClk);
+//	assign nClk = (q && VClk);
+	// IC22D
+	assign Clk = !(q && VClk);
+	assign Luma_Ctrl = !q;
+	// IC22C
+	assign ClkPulse = !(Luma_Ctrl && VClk);
 endmodule

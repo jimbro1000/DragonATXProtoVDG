@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: Generate a 3us pulse based on a 3.8MHz clk input
 //
 // Dependencies: 
 //
@@ -25,30 +25,39 @@ module LinePulseGenerator(
     output wire Q2
     );
 
-	 reg[3:0] counter;
 	 reg enable;
 	 reg iq;
 	 reg toggle;
 	 reg iq2;
 	 
+	 wire rst;
+	 wire ClkIn;
+	 wire [3:0] counter;
+	 
+	 assign rst = (!toggle && !enable) || counter == 4'b1010;
+	 assign ClkIn = (enable && CLK);
+	 
+	FourBitCounter countClk(
+		.CLK(CLK),
+		.RST(rst),
+		.count(counter)
+	);
+	 
 	 initial begin
 		iq = 1;
 		iq2 = 0;
-		counter = 0;
 		enable = 0;
 		toggle = 0;
 	 end
 	 
-	 always @(CLK, SYNC) begin
+	 always @(CLK, SYNC, toggle, enable) begin
 		if (!SYNC) begin
 			if(!toggle && !enable) begin
 				enable = 1;
 				toggle = 1;
-				counter <= 0;
 				iq <= 0;
-			end else if (enable && CLK) begin
-				counter <= counter + 1;
-				if (counter == 10) begin
+			end else begin
+				if (counter == 4'b0000) begin
 					iq <= 1;
 					enable = !enable;
 					iq2 <= !iq2;
