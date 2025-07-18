@@ -3,14 +3,12 @@ HSn => HSn.IN1
 FSn => FSn.IN1
 VClk => VClk.IN1
 Format => nextFormat.DATAIN
-E => ~NO_FANOUT~
 PALClock => FormatClock.IN1
 CLK <= CLK.DB_MAX_OUTPUT_PORT_TYPE
 HS <= HS.DB_MAX_OUTPUT_PORT_TYPE
 LINE_PULSE <= LINE_PULSE.DB_MAX_OUTPUT_PORT_TYPE
-LUMA_CONTROL <= <VCC>
-CHROMA_CONTROL <= LinePulseGenerator:linePulseGenerator.Q2
-SYNC_CONTROL <= LinePulseGenerator:linePulseGenerator.Q
+PAD_LUMA <= VClkPulse.DB_MAX_OUTPUT_PORT_TYPE
+LUMA_CONTROL <= LUMA_CONTROL.DB_MAX_OUTPUT_PORT_TYPE
 FrmFormat <= nextFormat.DB_MAX_OUTPUT_PORT_TYPE
 FormatClock <= FormatClock.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -25,17 +23,18 @@ FSn => count.OUTPUTSELECT
 FSn => count.OUTPUTSELECT
 FSn => count.OUTPUTSELECT
 FSn => count.OUTPUTSELECT
+FSn => Line24.IN0
 Line24 <= Line24.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DragonPalLogic|VClkInterposer:interposer
 VClk => nVClk.IN0
-VClk => nClk.IN0
+VClk => Clk.IN0
 VClk => ClkPulse.IN0
 Line24 => c.IN0
 VClkPulse => VClkPulse.IN1
 Clk <= Clk.DB_MAX_OUTPUT_PORT_TYPE
-Luma_Ctrl <= nClk.DB_MAX_OUTPUT_PORT_TYPE
+Luma_Ctrl <= Luma_Ctrl.DB_MAX_OUTPUT_PORT_TYPE
 ClkPulse <= ClkPulse.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -52,15 +51,6 @@ Qa <= iqa.DB_MAX_OUTPUT_PORT_TYPE
 
 |DragonPalLogic|VClkPulseGenerator:pulseGenerator
 nVCLK => always0.IN0
-Pulse <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DragonPalLogic|LinePulseGenerator:linePulseGenerator
-CLK => always0.IN0
-SYNC => always0.IN0
-SYNC => toggle.IN1
-SYNC => comb.IN1
-Q <= iq.DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= iq2.DB_MAX_OUTPUT_PORT_TYPE
+Pulse <= Pulse.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -44,13 +44,9 @@ set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:42:37  JUNE 02, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name VERILOG_FILE VClkPulseGenerator.v -hdl_version Verilog_2001
 set_global_assignment -name VERILOG_FILE VClkInterposer.v -hdl_version Verilog_2001
-set_global_assignment -name VERILOG_FILE LinePulseGenerator.v -hdl_version Verilog_2001
 set_global_assignment -name VERILOG_FILE HSnCounter.v -hdl_version Verilog_2001
 set_global_assignment -name VERILOG_FILE DecaQuintCounter.v -hdl_version Verilog_2001
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
-set_global_assignment -name DEVICE_FILTER_PIN_COUNT 44
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 10
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Design Compiler"
 set_global_assignment -name EDA_INPUT_VCC_NAME VDD -section_id eda_design_synthesis
@@ -76,17 +72,24 @@ set_location_assignment PIN_2 -to LUMA_CONTROL
 set_location_assignment PIN_3 -to FrmFormat
 set_location_assignment PIN_6 -to FSn
 set_location_assignment PIN_8 -to HSn
-set_location_assignment PIN_10 -to E
 set_location_assignment PIN_12 -to Format
 set_location_assignment PIN_22 -to VClk
 set_location_assignment PIN_25 -to PALClock
 set_location_assignment PIN_44 -to HS
 set_location_assignment PIN_42 -to CLK
 set_location_assignment PIN_35 -to FormatClock
-set_location_assignment PIN_33 -to CHROMA_CONTROL
-set_location_assignment PIN_31 -to SYNC_CONTROL
 set_location_assignment PIN_30 -to LINE_PULSE
-set_location_assignment PIN_26 -to TCK
-set_location_assignment PIN_32 -to TDO
-set_location_assignment PIN_1 -to TDI
-set_location_assignment PIN_7 -to TMS
+set_location_assignment PIN_34 -to PAD_LUMA
+set_global_assignment -name SDC_FILE DragonPalLogic.sdc
+set_instance_assignment -name IO_STANDARD TTL -to LUMA_CONTROL
+set_instance_assignment -name IO_STANDARD TTL -to FrmFormat
+set_instance_assignment -name IO_STANDARD TTL -to FSn
+set_instance_assignment -name IO_STANDARD TTL -to HSn
+set_instance_assignment -name IO_STANDARD TTL -to Format
+set_instance_assignment -name IO_STANDARD TTL -to VClk
+set_instance_assignment -name IO_STANDARD TTL -to PALClock
+set_instance_assignment -name IO_STANDARD TTL -to LINE_PULSE
+set_instance_assignment -name IO_STANDARD TTL -to PAD_LUMA
+set_instance_assignment -name IO_STANDARD TTL -to FormatClock
+set_instance_assignment -name IO_STANDARD TTL -to CLK
+set_instance_assignment -name IO_STANDARD TTL -to HS
