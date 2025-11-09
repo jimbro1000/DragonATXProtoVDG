@@ -450,6 +450,176 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_Coaxial"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0.254 3.048 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_Coaxial"
+				(at 2.921 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_Coaxial_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.778 0)
+					(mid 0.222 -1.8079)
+					(end -1.778 -0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.778 0.508)
+					(mid 0.2221 1.8084)
+					(end 1.778 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Conn_Coaxial_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "In"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "Ext"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -8342,10 +8512,6 @@
 		(uuid "f01fc890-01ff-4db6-98c2-c6732308ba0b")
 	)
 	(no_connect
-		(at 265.43 172.72)
-		(uuid "00262572-1d30-4cbf-b02b-e81399c4d968")
-	)
-	(no_connect
 		(at 265.43 93.98)
 		(uuid "012596f8-46b0-400e-a786-9b0cd9289810")
 	)
@@ -8362,20 +8528,12 @@
 		(uuid "0c7657fe-7958-4fe6-9723-f3381690d7e0")
 	)
 	(no_connect
-		(at 163.83 154.94)
-		(uuid "174ff971-203b-48e5-a3bb-add5320e8e21")
-	)
-	(no_connect
 		(at 265.43 154.94)
 		(uuid "19836fcf-47e3-42fc-97b8-f120799a5145")
 	)
 	(no_connect
 		(at 265.43 132.08)
 		(uuid "22e1dc8b-61a4-48d4-a4ec-6905417ad6fb")
-	)
-	(no_connect
-		(at 163.83 180.34)
-		(uuid "22f7dc70-c55d-47db-989a-6535abcc2592")
 	)
 	(no_connect
 		(at 41.91 109.22)
@@ -8390,10 +8548,6 @@
 		(uuid "2e3d7987-9a2a-4468-8574-b6dfed46f88a")
 	)
 	(no_connect
-		(at 163.83 177.8)
-		(uuid "3423b125-25f1-49d2-8165-f37b9315eab9")
-	)
-	(no_connect
 		(at 265.43 129.54)
 		(uuid "399f6014-f574-4230-a4e4-9f3d58c84dc7")
 	)
@@ -8404,10 +8558,6 @@
 	(no_connect
 		(at 289.56 83.82)
 		(uuid "3afbb3b5-ff28-4d81-9115-6d9c75f91bea")
-	)
-	(no_connect
-		(at 163.83 182.88)
-		(uuid "3b691ebc-d031-4f1c-aa3f-ed32b0488cc5")
 	)
 	(no_connect
 		(at 265.43 134.62)
@@ -8454,20 +8604,12 @@
 		(uuid "7a4bcc72-20d8-44ea-a52c-ce32edb2ebcd")
 	)
 	(no_connect
-		(at 163.83 142.24)
-		(uuid "86a69f19-282b-42bf-b6c7-9876e69ae74a")
-	)
-	(no_connect
 		(at 163.83 83.82)
 		(uuid "89f2d675-152c-43de-b3ed-99110c9f347a")
 	)
 	(no_connect
 		(at 41.91 114.3)
 		(uuid "8ab8f3ec-6c8d-40c3-860f-2a46d4a69ac9")
-	)
-	(no_connect
-		(at 163.83 139.7)
-		(uuid "8ff88b6d-b53f-4f99-ad2f-eea8af585dd2")
 	)
 	(no_connect
 		(at 224.79 269.24)
@@ -8478,16 +8620,8 @@
 		(uuid "993377ef-d1c6-423b-98ed-baeeb58d7adb")
 	)
 	(no_connect
-		(at 163.83 170.18)
-		(uuid "99456027-8d8a-4e2c-bfde-6ddd0dc02846")
-	)
-	(no_connect
 		(at 41.91 30.48)
 		(uuid "b7f45b4c-71e7-4812-b92b-a2a950c1b9e0")
-	)
-	(no_connect
-		(at 163.83 157.48)
-		(uuid "b82078e5-76b8-449c-a585-c082f785f57e")
 	)
 	(no_connect
 		(at 247.65 40.64)
@@ -8514,16 +8648,8 @@
 		(uuid "d317d3fb-5da3-4d5f-becf-c824e6fc4f42")
 	)
 	(no_connect
-		(at 163.83 167.64)
-		(uuid "d5038366-6c24-4335-9520-50f70abb6f52")
-	)
-	(no_connect
 		(at 265.43 157.48)
 		(uuid "e0c37b92-6b12-4614-986f-edffd5b0bdf7")
-	)
-	(no_connect
-		(at 265.43 170.18)
-		(uuid "e1b17480-f082-4e01-9590-f91787c39f0f")
 	)
 	(no_connect
 		(at 29.21 81.28)
@@ -8534,16 +8660,12 @@
 		(uuid "ebd1b02a-4382-4734-8435-876fd99c0537")
 	)
 	(no_connect
-		(at 163.83 134.62)
-		(uuid "f49bc635-5d16-40a0-a692-8ce6dca076fd")
-	)
-	(no_connect
 		(at 41.91 66.04)
 		(uuid "fda19dac-bfcb-4523-841f-94b389caf7ff")
 	)
 	(wire
 		(pts
-			(xy 265.43 264.16) (xy 269.24 264.16)
+			(xy 45.72 200.66) (xy 49.53 200.66)
 		)
 		(stroke
 			(width 0)
@@ -8603,7 +8725,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 269.24) (xy 269.24 269.24)
+			(xy 45.72 205.74) (xy 49.53 205.74)
 		)
 		(stroke
 			(width 0)
@@ -8763,6 +8885,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 220.98) (xy 49.53 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "310ab8a7-c9b1-4699-992b-0c1a02a81055")
+	)
+	(wire
+		(pts
 			(xy 197.104 26.67) (xy 205.74 26.67)
 		)
 		(stroke
@@ -8770,6 +8902,16 @@
 			(type default)
 		)
 		(uuid "323b8e74-675a-484e-85cd-48cffbbd77aa")
+	)
+	(wire
+		(pts
+			(xy 45.72 215.9) (xy 49.53 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32fdd76b-b5b4-4642-b071-0d5c779d45f1")
 	)
 	(wire
 		(pts
@@ -9133,6 +9275,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 226.06) (xy 49.53 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9d19c0b-770e-4154-8ab4-7b1f9634eb2a")
+	)
+	(wire
+		(pts
 			(xy 188.214 26.67) (xy 197.104 26.67)
 		)
 		(stroke
@@ -9243,7 +9395,17 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 274.32) (xy 269.24 274.32)
+			(xy 45.72 236.22) (xy 49.53 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfa382e2-48fd-48ea-9fdf-78cf604ad5dc")
+	)
+	(wire
+		(pts
+			(xy 45.72 210.82) (xy 49.53 210.82)
 		)
 		(stroke
 			(width 0)
@@ -9283,6 +9445,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 231.14) (xy 49.53 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfafe81e-ff7a-48ed-a4a9-51285aa7a469")
+	)
+	(wire
+		(pts
 			(xy 295.91 35.56) (xy 295.91 36.83)
 		)
 		(stroke
@@ -9300,6 +9472,16 @@
 			(type default)
 		)
 		(uuid "e7c2162f-750c-4d2e-a782-c29438edac5a")
+	)
+	(wire
+		(pts
+			(xy 160.02 137.16) (xy 163.83 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea374be2-fde5-4caf-bb4f-0d56ac2ab321")
 	)
 	(wire
 		(pts
@@ -9323,7 +9505,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 259.08) (xy 269.24 259.08)
+			(xy 45.72 195.58) (xy 49.53 195.58)
 		)
 		(stroke
 			(width 0)
@@ -9631,6 +9813,26 @@
 		)
 		(uuid "2a88228c-b195-427f-b6ec-387ce4f0aa48")
 	)
+	(label "DA10"
+		(at 163.83 182.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2ccaac26-103f-4423-9892-4c1640ab87a4")
+	)
+	(label "DA12"
+		(at 265.43 170.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2d2186b6-1405-4aec-bd3f-f66276e30d6c")
+	)
 	(label "Z3"
 		(at 41.91 78.74 0)
 		(effects
@@ -9741,6 +9943,26 @@
 		)
 		(uuid "3e37caf5-d725-446c-9435-e26c7e75b8de")
 	)
+	(label "DA5"
+		(at 163.83 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4193d769-e0f3-4be7-a518-42fa8d3a70d9")
+	)
+	(label "DA4"
+		(at 163.83 154.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "420b581c-7f14-4489-96ac-271fe3548276")
+	)
 	(label "Q0"
 		(at 91.44 35.56 0)
 		(effects
@@ -9791,6 +10013,16 @@
 		)
 		(uuid "4c42d7a9-8863-4583-b143-cee204fc1a9a")
 	)
+	(label "DA0"
+		(at 45.72 236.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4d29c0bb-b6ae-47c1-af55-35d853e27be0")
+	)
 	(label "GG0"
 		(at 311.15 43.18 180)
 		(effects
@@ -9820,6 +10052,16 @@
 			(justify left bottom)
 		)
 		(uuid "508ad109-acd7-48b8-9d27-6b32ac0db434")
+	)
+	(label "DA7"
+		(at 163.83 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "51671ac9-1244-41dd-acb1-126e56c6ff7e")
 	)
 	(label "FIRQ"
 		(at 41.91 53.34 0)
@@ -9901,6 +10143,26 @@
 		)
 		(uuid "5c2dc840-b207-4661-93a2-4dc9118e7a80")
 	)
+	(label "~{RP}"
+		(at 45.72 231.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5d852ef6-119f-4b57-9992-76117d4adcfb")
+	)
+	(label "DA11"
+		(at 265.43 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "606d5238-6b8a-48d1-89cd-a2ee6d41aeb5")
+	)
 	(label "~{A}{slash}G"
 		(at 29.21 104.14 180)
 		(effects
@@ -9961,6 +10223,16 @@
 		)
 		(uuid "6b8a00be-b2b3-4b4e-8a57-52abbfa73012")
 	)
+	(label "DA1"
+		(at 163.83 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6bdd36df-f762-478d-a7ce-0b0d9514a067")
+	)
 	(label "R1"
 		(at 29.21 96.52 180)
 		(effects
@@ -9980,6 +10252,16 @@
 			(justify left bottom)
 		)
 		(uuid "76e1b80a-9c11-4015-9d44-758cca6fb31d")
+	)
+	(label "DA9"
+		(at 163.83 180.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "798d6172-b14e-4624-a88b-2ff8691ef701")
 	)
 	(label "R2"
 		(at 29.21 99.06 180)
@@ -10331,6 +10613,16 @@
 		)
 		(uuid "c24b872f-bfe1-4e4d-988e-e554979f686d")
 	)
+	(label "DA8"
+		(at 163.83 177.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c3b916ae-061a-4fbc-b5b9-b77fea970419")
+	)
 	(label "DL1"
 		(at 29.21 30.48 180)
 		(effects
@@ -10340,6 +10632,26 @@
 			(justify right bottom)
 		)
 		(uuid "c53984eb-e9d1-47d8-a411-c279ba230aaf")
+	)
+	(label "DA2"
+		(at 163.83 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c7f64955-24e0-4a21-b1d5-7f20a8180dce")
+	)
+	(label "DA3"
+		(at 163.83 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ca376019-de5c-49b2-ab86-de36b3dc03d3")
 	)
 	(label "Q7"
 		(at 91.44 45.72 0)
@@ -10522,6 +10834,16 @@
 		(uuid "eb3cbe40-9c3c-4e63-9f16-7cecc34b756b")
 	)
 	(label "VCLK"
+		(at 45.72 220.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ed5a8a66-a1b8-4e52-bce3-460d9c3bf7c5")
+	)
+	(label "VCLK"
 		(at 29.21 114.3 180)
 		(effects
 			(font
@@ -10540,6 +10862,16 @@
 			(justify right bottom)
 		)
 		(uuid "f0130c80-8aad-42c9-b5f6-c82cb1a5427e")
+	)
+	(label "DA6"
+		(at 163.83 167.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f0e7f300-e00e-407f-bba9-3bf34e210097")
 	)
 	(label "GR0"
 		(at 265.43 147.32 0)
@@ -10647,7 +10979,7 @@
 	)
 	(global_label "BLUE"
 		(shape input)
-		(at 265.43 259.08 180)
+		(at 45.72 195.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10657,7 +10989,7 @@
 		)
 		(uuid "0779bfad-8135-424c-9a58-d13fb32e586a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.6672 259.08 0)
+			(at 37.9572 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10691,7 +11023,7 @@
 	)
 	(global_label "RED"
 		(shape input)
-		(at 265.43 264.16 180)
+		(at 45.72 200.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10701,7 +11033,7 @@
 		)
 		(uuid "15286671-0eb9-4b6d-a05f-a853566455d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 258.7558 264.16 0)
+			(at 39.0458 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10729,6 +11061,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Format"
+		(shape input)
+		(at 45.72 226.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "22239195-3b56-4a1e-a72a-fd2ea6d41ddc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 36.143 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -10975,6 +11329,50 @@
 			)
 		)
 	)
+	(global_label "Composite"
+		(shape bidirectional)
+		(at 142.24 265.43 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "69d99b6c-070d-4760-ba6f-658f34d4b9fa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 128.286 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FMT_CLOCK"
+		(shape input)
+		(at 45.72 215.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6b342944-625e-4819-b6fc-a4b0d1584e4e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.091 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Luma"
 		(shape bidirectional)
 		(at 41.91 22.86 0)
@@ -10999,7 +11397,7 @@
 	)
 	(global_label "GREEN"
 		(shape input)
-		(at 265.43 269.24 180)
+		(at 45.72 205.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11009,7 +11407,7 @@
 		)
 		(uuid "6f550352-c232-46f9-b22c-e112f9b2ea06")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.2763 269.24 0)
+			(at 36.5663 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11064,8 +11462,8 @@
 		)
 	)
 	(global_label "FrmFormat"
-		(shape output)
-		(at 265.43 274.32 180)
+		(shape input)
+		(at 45.72 210.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11075,7 +11473,7 @@
 		)
 		(uuid "8a4b4bc1-a2fc-433f-9455-49bb5a982eaa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.2849 274.32 0)
+			(at 32.5749 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11175,7 +11573,7 @@
 	)
 	(global_label "TMS"
 		(shape input)
-		(at 163.83 137.16 180)
+		(at 160.02 137.16 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11185,7 +11583,7 @@
 		)
 		(uuid "a851a6bb-4881-400f-91c5-d6b1d02fe8d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.8705 137.16 0)
+			(at 154.0605 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13101,7 +13499,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 269.24 259.08 0)
+		(at 49.53 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13110,7 +13508,7 @@
 		(fields_autoplaced yes)
 		(uuid "34d71af2-91d4-40db-a812-1659653ae8f6")
 		(property "Reference" "TP1"
-			(at 273.05 256.2225 0)
+			(at 53.34 192.7225 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13119,7 +13517,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Luma"
-			(at 273.05 258.7625 0)
+			(at 53.34 195.2625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13128,7 +13526,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 274.32 259.08 0)
+			(at 54.61 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13137,7 +13535,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 274.32 259.08 0)
+			(at 54.61 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13146,7 +13544,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.24 259.08 0)
+			(at 49.53 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13654,16 +14052,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 269.24 269.24 0)
+		(at 49.53 215.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "454bcac6-f6f6-44f4-9ff7-bdd19435c78e")
-		(property "Reference" "TP3"
-			(at 273.05 266.3825 0)
+		(uuid "453b4b82-2f6b-4261-bc49-b7f0dd5f9638")
+		(property "Reference" "TP7"
+			(at 53.34 213.0425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13671,8 +14069,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint_PhiB"
-			(at 273.05 268.9225 0)
+		(property "Value" "TestPoint_ColourClock"
+			(at 53.34 215.5825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13681,7 +14079,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 274.32 269.24 0)
+			(at 54.61 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13690,7 +14088,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 274.32 269.24 0)
+			(at 54.61 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13699,7 +14097,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.24 269.24 0)
+			(at 49.53 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d8be8cde-60e9-4882-be3b-a0fcb199ad6b")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 49.53 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "454bcac6-f6f6-44f4-9ff7-bdd19435c78e")
+		(property "Reference" "TP3"
+			(at 53.34 202.8825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_PhiB"
+			(at 53.34 205.4225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 54.61 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13714,6 +14179,73 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 49.53 220.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "486dd988-b221-4799-8b3b-852d24d2f57c")
+		(property "Reference" "TP8"
+			(at 53.34 218.1225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_PixelClock"
+			(at 53.34 220.6625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 54.61 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d18c2105-9490-4b76-836e-05d46e00d335")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -14213,7 +14745,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 269.24 264.16 0)
+		(at 49.53 200.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14222,7 +14754,7 @@
 		(fields_autoplaced yes)
 		(uuid "5baef31b-782d-4421-a34a-16f2acea54ad")
 		(property "Reference" "TP2"
-			(at 273.05 261.3025 0)
+			(at 53.34 197.8025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14231,7 +14763,7 @@
 			)
 		)
 		(property "Value" "TestPoint_PhiA"
-			(at 273.05 263.8425 0)
+			(at 53.34 200.3425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14240,7 +14772,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 274.32 264.16 0)
+			(at 54.61 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14249,7 +14781,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 274.32 264.16 0)
+			(at 54.61 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14258,7 +14790,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.24 264.16 0)
+			(at 49.53 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15433,7 +15965,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Oscillator:Oscillator_SMD_SeikoEpson_SG8002LB-4Pin_5.0x3.2mm_HandSoldering"
+		(property "Footprint" "Crystal:Crystal_SMD_7050-4Pin_7.0x5.0mm"
 			(at 264.16 92.71 0)
 			(effects
 				(font
@@ -17036,7 +17568,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U"
 			(at 375.92 204.47 0)
 			(effects
 				(font
@@ -17063,7 +17595,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "478-4922-1-ND"
+		(property "DigiKey" "478-1768-1-ND"
 			(at 375.92 204.47 90)
 			(effects
 				(font
@@ -17082,6 +17614,73 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 49.53 236.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae514c90-9097-42ca-bf81-2bc52ca4a34d")
+		(property "Reference" "TP11"
+			(at 53.34 233.3625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_DA0"
+			(at 53.34 235.9025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 54.61 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86318228-5015-44c9-a8e9-0684a1e4a54b")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -17451,7 +18050,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U"
 			(at 375.92 224.79 0)
 			(effects
 				(font
@@ -17478,7 +18077,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "478-4922-1-ND"
+		(property "DigiKey" "478-1768-1-ND"
 			(at 375.92 224.79 90)
 			(effects
 				(font
@@ -17694,6 +18293,72 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "#PWR075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 270.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c83e034e-bd44-4ca2-b5d2-c4b2789830e1")
+		(property "Reference" "#PWR05"
+			(at 147.32 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "290e1f7e-63c7-4131-a64f-8b590c6ec30b")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -18044,6 +18709,73 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 49.53 231.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5173b75-267e-450a-9a10-5d34ca808620")
+		(property "Reference" "TP10"
+			(at 53.34 228.2825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_RowResetPulse"
+			(at 53.34 230.8225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 54.61 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d0d6891-8edd-4497-9303-29a78d5952cd")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -18411,6 +19143,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 147.32 265.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc4f0631-5862-49eb-bbc2-69693d55959f")
+		(property "Reference" "J1"
+			(at 151.13 264.4531 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_Coaxial"
+			(at 151.13 266.9931 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Library:Connector_RCA"
+			(at 147.32 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 147.32 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed9ddfc5-6367-4863-ad6f-e0b6a7fc4ff0")
+		)
+		(pin "2"
+			(uuid "3717c402-2961-4b4d-85ed-5fd5c8d4634b")
+		)
+		(instances
+			(project ""
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 200.66 266.7 90)
 		(unit 1)
@@ -18592,7 +19394,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U"
 			(at 375.92 214.63 0)
 			(effects
 				(font
@@ -18619,7 +19421,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "478-4922-1-ND"
+		(property "DigiKey" "478-1768-1-ND"
 			(at 375.92 214.63 90)
 			(effects
 				(font
@@ -19166,7 +19968,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 269.24 274.32 0)
+		(at 49.53 210.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19175,7 +19977,7 @@
 		(fields_autoplaced yes)
 		(uuid "f264aedf-d77a-409e-bdaf-c3f36a45fc7a")
 		(property "Reference" "TP4"
-			(at 273.05 271.4625 0)
+			(at 53.34 207.9625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19184,7 +19986,7 @@
 			)
 		)
 		(property "Value" "TestPoint_FrameFormat"
-			(at 273.05 274.0025 0)
+			(at 53.34 210.5025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19193,7 +19995,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 274.32 274.32 0)
+			(at 54.61 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19202,7 +20004,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 274.32 274.32 0)
+			(at 54.61 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19211,7 +20013,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.24 274.32 0)
+			(at 49.53 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19423,6 +20225,73 @@
 			(project "DragonATXProtoVDG"
 				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
 					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 49.53 226.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "faa40bea-f6ee-49f7-b68b-95243e3247f5")
+		(property "Reference" "TP9"
+			(at 53.34 223.2025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_ReqFormat"
+			(at 53.34 225.7425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 54.61 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eebf8027-14b8-4748-81d5-f95f9bab81e4")
+		)
+		(instances
+			(project "DragonATXProtoVDG"
+				(path "/ecdc7bf3-2e40-49cd-bc4c-ef5d00bcfe42"
+					(reference "TP9")
 					(unit 1)
 				)
 			)
